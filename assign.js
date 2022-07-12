@@ -106,5 +106,27 @@ if ((year % 4 === 0 && year % 100 !== 0) || (year % 100 === 0 && year % 400 === 
             return false;
     }
 }
-
+//functions as values
 console.log(leap_year(2000,2022));
+
+function  square  (x) {  return  x*x; }
+var  s = square; 
+console.log(s(4))
+function  add  (x, y) { 
+    return  x + y; 
+   }
+    console.log(add(5,6))   
+function subtract(z,w){
+    return z-w;
+}
+console.log(subtract(10,5))
+//closure
+function parent(){
+    var house='whitehouse';
+    function child(){
+        var car='tesla'
+        console.log('i have:',house,car);
+    }
+    var legacy =parent();
+    console.log(typeof(legacy));
+}legacy();
